@@ -1,6 +1,7 @@
 /node_modules
 .DS_store
 .txt
+.env
 
 # Logs
 logs
