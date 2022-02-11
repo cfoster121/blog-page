@@ -2,17 +2,19 @@ const router = require("express").Router();
 const { Blog } = require("../../models");
 
 
-// router.get("/:blog_id", (req, res) => {
-//     Blog.findAll(req.params.blog_id, {
-//     })
-//         .then((dbBlogData) => {
-//             res.json(dbBlogData);
-//         })
-//         .catch((err) => {
-//             console.log(err);
-//             res.status(500).json(err);
-//         });
-// });
+router.get("/:blog_id", (req, res) => {
+    Blog.findAll({
+        where: {
+          id: req.params.blog_id 
+        }})
+        .then((dbBlogData) => {
+            res.json(dbBlogData);
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
 
 
 
