@@ -5,7 +5,7 @@ class Blog extends Model{}
 
 Blog.init({
     title: DataTypes.STRING,
-    body: DataTypes.STRING,
+    body: DataTypes.TEXT,
 },
 {sequelize}
 )
